@@ -11,7 +11,7 @@ class Product
 
   public function __construct($id,$catId,$name,$description,$image,$price){
     $this->_id = $id;
-    $this->_cat = $catId;
+    $this->_catId = $catId;
     $this->_name = $name;
     $this->_description = $description;
     $this->_image = $image;

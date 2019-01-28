@@ -26,6 +26,9 @@
                     echo'<a class="liens" href="./index.php?page=produits&cat='.$cat->_id.'&name='.$cat->_name.'">'.$cat->_name.'</a>';
                 echo '</li>';
             } ?>
+            <li>
+                <a class="liens" href="./index.php?page=produits">Tous</a>
+            </li>
         </ul>
         <!-- version JS
         <button onclick="location.href='controller de connexion" type="button">Se connecter</button>
