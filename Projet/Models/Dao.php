@@ -16,7 +16,7 @@ abstract class DAO
         return $this->_erreur;
     }
 
-    private function _requete($sql, $args = null)
+    public function _requete($sql, $args = null)
     {
         if ($args == null)
         {

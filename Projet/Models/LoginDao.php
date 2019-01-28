@@ -21,7 +21,6 @@ class LoginDao extends Dao
     }
 
     public function getLogin($username,$pwd){
-
         $sql = "SELECT * FROM logins WHERE username='$username'AND password='$pwd'";
         $pdos = Connexion::getInstance()->getBdd()->prepare($sql);// requête préparée
         $pdos->execute();
@@ -29,5 +28,11 @@ class LoginDao extends Dao
         $pdos->closeCursor();
         return new Login($res['id'],$res['customer_id'],$res['username'],$res['password']);
     }
-}
 
+    public function insertLogin($custId,$username,$pwd){
+      $sql = "INSERT INTO logins VALUES(NULL,?,?,?)";
+      $pdos = Connexion::getInstance()->getBdd()->prepare($sql);// requête préparée
+      $pdos->execute(array($custId,$username,$pwd));
+
+    }
+}

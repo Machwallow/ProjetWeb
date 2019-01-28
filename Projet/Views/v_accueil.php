@@ -7,8 +7,6 @@
         <p>Il s'agit d'un site réalisé pour un projet d'étude, bonne visite !</p>
     </div>
 
-
-
     <!--  Fin de la page -->
 
     <!--  Pied de page -->

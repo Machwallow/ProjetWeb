@@ -1,8 +1,7 @@
 <div class="main">
 		<h2>Identifiation Client</h2>
-    <?= $_SESSION['username'] ?>
 		<p>
-Merci d'entrer votre identifiant et votre mot de passe pour acceder à votre espace client. Si vous n'avez pas de compte client vous pouvez en créer un gratuitement <a href="../controller/connexion.php?new=true"><strong>ICI</strong></a>
+Merci d'entrer votre identifiant et votre mot de passe pour acceder à votre espace client. Si vous n'avez pas de compte client vous pouvez en créer un gratuitement <a href="./index.php?page=inscription"><strong>ICI</strong></a>
 		</p>
 		<form action="./index.php?page=connexion" method="post">
 	        	<ul>
@@ -15,10 +14,8 @@ Merci d'entrer votre identifiant et votre mot de passe pour acceder à votre esp
 	        			<label for="idmdp">Votre mot de passe : </label>
 	        			<input type="password" name="pwd" id="idmdp" required />
 	        		</li>
-	        		<br>
-	        		<li>
-	        			<input class="btn btn-success" type="submit" value="Connexion"/>
-	        		</li>
-	        	</ul>
-	    </form>
-	</div>
+						</ul>
+	        	<br>
+	        	<input class="btn btn-success" type="submit" value="Connexion"/>
+	   </form>
+</div>

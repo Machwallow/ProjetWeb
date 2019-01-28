@@ -6,8 +6,8 @@
     <meta name="Language" content="<?= LANG ?>"/>
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"/>
 
-    <link href="<?= PATH_CSS.'style.css' ?>" rel="stylesheet">
     <link href="<?= PATH_CSS.'/bootstrap.min.css'?>" rel="stylesheet">
+    <link href="<?= PATH_CSS.'style.css' ?>" rel="stylesheet">
 </head>
 <body>
 <!-- En-tête -->
