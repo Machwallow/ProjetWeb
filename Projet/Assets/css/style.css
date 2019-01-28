@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: "trebuchet ms", verdana, sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #ffffff;
+    text-align: center;
+    padding:20px;
+}
+
+
+a:visited {
+    text-decoration: none;
+    border-bottom: 1px dotted #369;
+    color: #000;
+}
+
+a:hover, a:active {
+
+    text-decoration: none;
+    border-bottom: 1px solid #036;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+
+ul{
+    list-style-type:cambodian;
+}
+
+#titre {
+
+    width: 100%;
+
+    text-transform: uppercase;
+
+    background-color: #333333;
+
+    letter-spacing: 0.3em;
+
+    color: #fff;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    padding: 10px 0px 10px 0px;
+}
+
+#ss-titre {
+
+    /* width: 100%; */
+
+    padding: 10px 0px 10px 0px;
+
+    text-transform: uppercase;
+
+    background-color: #eeeeee;
+
+    letter-spacing: 0.3em;
+
+    font-size: 18px;
+
+    color: #fff;
+
+    text-align: center;
+}
+
+nav {
+    /* font-size: 14px; */
+    padding-left: 20px;
+    font-weight: bold;
+    height: auto;
+    width: 180px;
+    padding-top: 10px;
+    position: fixed;
+    padding-bottom: 20px;
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+.main{
+    margin-left: 180px;
+    padding: 20px;
+}
+
+footer{
+    text-align: right;
+}
+
+.liens {
+    text-decoration: none;
+    color: #333333;
+}
