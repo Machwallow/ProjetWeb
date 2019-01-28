@@ -30,7 +30,7 @@
                     </td>
                     <td>
                         <input type="hidden" name="idRemoveProd" value="<?= $i ?>" />
-                        <input class="btn btn-outline-danger" type="submit" value="[Supprimer]"/>
+                        <input class="btn btn-outline-danger" type="submit" value="Supprimer"/>
                     </td>
                 </tr>
                 <?php $i++;

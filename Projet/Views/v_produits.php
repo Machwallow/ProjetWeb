@@ -8,7 +8,7 @@
                         <strong><?= $prod->_name?></strong><br>
                         <?= $prod->_description?><br>
                         <strong>Notre prix : <?= $prod->_price ?>€</strong><br><br>
-                        <a role="button" class="btn btn-outline-primary" href="./index.php?page=addProduct&idP=<?= $prod->_id ?>">[Acheter]</a>
+                        <a role="button" class="btn btn-outline-primary" href="./index.php?page=addProduct&idP=<?= $prod->_id ?>">Ajouter au panier</a>
                     </td>
                 </tr>
             <?php } ?>

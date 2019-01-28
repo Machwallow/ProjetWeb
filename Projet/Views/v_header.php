@@ -16,7 +16,7 @@
     <h2 id="ss-titre">
         <a href="./index.php?page=accueil" class="liens">Accueil</a>
         -
-        <a href="./index.php?page=panier" class="liens">Voir panier</a>
+        <a href="./index.php?page=panier" class="liens">Voir panier <?php if (isset($_SESSION['basket'])) echo '('.count($_SESSION['basket']).')'; else echo '(0)'; ?></a>
     </h2>
     <nav>
         <h3>Notre offre :</h3>
