@@ -21,6 +21,7 @@ define('PATH_LIB','./Lib/');
 define('PATH_MODELS','./Models/');
 define('PATH_VIEWS','./Views/v_');
 define('PATH_TEXT','./Languages/');
+define('FPDF_FONTPATH',PATH_ASSETS.'./font/');
 
 //sous dossiers
 define('PATH_CSS', PATH_ASSETS.'css/');

@@ -3,7 +3,7 @@
     <p>
         Veuillez remplir les champs du formulaire ci-dessous pour valider votre commande.
     </p>
-    <form action="./index.php?page=inscription" method="post">
+    <form action="./index.php?page=payer" method="post">
         <ul>
             <li>
                 <label for="idfn">Prénom : </label>
@@ -46,13 +46,14 @@
             </li>
             <br>
             <li>
-                <label for="cd">Moyen de paiement </label>
-                <select name="creditCard" id="cd" class="form-control" style="width: fit-content">
+                <label for="cd">Moyen de paiement : </label>
+                <select name="creditCard" id="cd" class="custom-select" style="width: fit-content;">
                     <option selected="selected">MasterCard</option>
-                    <option selected="selected">VISA</option>
+                    <option>VISA</option>
                 </select>
-                <span class="fas fa-credit-card"></span>
+                <i class="fas fa-credit-card" style="font-size: 20px"></i>
             </li>
+            <input type="hidden" name="isPaid" value="true"/>
         </ul>
         <a href="./index.php?page=panier" role="button" class="btn btn-outline-secondary">Retour</a>
         <input class="btn btn-success" type="submit" value="Payer"/>
