@@ -31,6 +31,11 @@
             </li>
             <br>
             <li>
+                <label for="idpc">Ville : </label>
+                <input type="text" name="city" id="idpc" required />
+            </li>
+            <br>
+            <li>
                 <label for="idpn">Numéro de téléphone : </label>
                 <input type="tel" name="phone" id="idpn" value="<?= $_SESSION['phone'] ?>" minlength="10" maxlength="10" required />
             </li>
@@ -47,9 +52,9 @@
             <br>
             <li>
                 <label for="cd">Moyen de paiement : </label>
-                <select name="creditCard" id="cd" class="custom-select" style="width: fit-content;">
-                    <option selected="selected">MasterCard</option>
-                    <option>VISA</option>
+                <select name="moyenP" id="cd" class="custom-select" style="width: fit-content;">
+                    <option selected="selected" value="MasterCard">MasterCard</option>
+                    <option value="VISA" >VISA</option>
                 </select>
                 <i class="fas fa-credit-card" style="font-size: 20px"></i>
             </li>

@@ -33,6 +33,7 @@ if (isset($_POST['username']) && isset($_POST['pwd'])) {
             $_SESSION['postcode'] = $customer->_postcode;
             $_SESSION['phone'] = $customer->_phone;
             $_SESSION['email'] = $customer->_email;
+            $_SESSION['registered'] = $customer->_registered;
 
             header('Location:./index.php?page=accueil');
         }
