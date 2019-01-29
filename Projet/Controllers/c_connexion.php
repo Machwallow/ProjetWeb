@@ -7,35 +7,46 @@
  */
 
 require_once (PATH_MODELS.'LoginDao.php');
+require_once (PATH_MODELS.'AdminDao.php');
 require_once (PATH_MODELS.'CustomerDao.php');
 
 session_start();
+$error = null;
 
 if (isset($_POST['username']) && isset($_POST['pwd'])) {
 
-    try{
+    if(!isset($_POST['isAdmin']) && $_POST['isAdmin']!= 'isAdmin'){
         $logDao = new LoginDao();
         $custDao = new CustomerDao();
         $login = $logDao->getLogin($_POST['username'],SHA1($_POST['pwd']));
         $customer = $custDao->getCustomer($login->_customerId);
 
-        $_SESSION['username'] = $login->_username;
-        $_SESSION['customerId'] = $login->_customerId;
-        $_SESSION['id'] = $login->_id;
-        $_SESSION['forname'] = $customer->_forname;
-        $_SESSION['surname'] = $customer->_surname;
-        $_SESSION['add1'] = $customer->_add1;
-        $_SESSION['add2'] = $customer->_add2;
-        $_SESSION['postcode'] = $customer->_postcode;
-        $_SESSION['phone'] = $customer->_phone;
-        $_SESSION['email'] = $customer->_email;
-        $_SESSION['phone'] = $customer->_phone;
+        if(!is_null($login->_id)){
 
-        header('Location:./index.php?page=accueil');
+            $_SESSION['username'] = $login->_username;
+            $_SESSION['customerId'] = $login->_customerId;
+            $_SESSION['id'] = $login->_id;
+            $_SESSION['forname'] = $customer->_forname;
+            $_SESSION['surname'] = $customer->_surname;
+            $_SESSION['add1'] = $customer->_add1;
+            $_SESSION['add2'] = $customer->_add2;
+            $_SESSION['postcode'] = $customer->_postcode;
+            $_SESSION['phone'] = $customer->_phone;
+            $_SESSION['email'] = $customer->_email;
 
-    }catch(Exception $e){
-
-        $error = "Compte non reconnu";
+            header('Location:./index.php?page=accueil');
+        }
+        else
+            $error = "Compte non reconnu";
+    }
+    else{
+        $adDao = new AdminDao();
+        if($adDao->existAdmin($_POST['username'],SHA1($_POST['pwd']))){
+            $_SESSION['isAdmin'] = true;
+            header('Location:./index.php?page=accueil');
+        }
+        else
+            $error = "Compte admin inexistant";
     }
 
 }

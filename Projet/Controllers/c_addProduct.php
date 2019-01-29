@@ -15,7 +15,19 @@ if(isset($_POST["qte"])){
     $prodDao = new ProductDao();
     $prod = $prodDao->getProductById($_GET["idP"]);
     $prodB = new ProdBasket($prod,$_POST["qte"]);
-    $_SESSION["basket"][] = $prodB;
+    if(isset($_SESSION['basket'])){
+        $isFound = false;
+        foreach($_SESSION['basket'] as $itemBasket){
+            if($itemBasket->_prod->_id == $_GET["idP"]){
+                $itemBasket->addQte($_POST["qte"]);
+                $isFound = true;
+            }
+        }
+        if(!$isFound)
+            $_SESSION["basket"][] = $prodB;
+    }
+    else
+        $_SESSION["basket"][] = $prodB;
     header('Location: ./index.php?page=produits');
 }
 

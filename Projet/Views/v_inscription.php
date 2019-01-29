@@ -36,13 +36,13 @@
   	        		</li>
   	        		<br>
   	        		<li>
-  	        			<label for="idpc">Code postale : </label>
+  	        			<label for="idpc">Code postal : </label>
   	        			<input type="number" name="postcode" id="idpc" minlength="5" maxlength="5" required />
   	        		</li>
   	        		<br>
   	        		<li>
   	        			<label for="idpn">Numéro de téléphone : </label>
-  	        			<input type="number" name="phone" id="idpn" minlength="10" maxlength="10" required />
+  	        			<input type="tel" name="phone" id="idpn" minlength="10" maxlength="10" required />
   	        		</li>
   	        		<br>
   	        		<li>

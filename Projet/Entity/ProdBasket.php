@@ -24,5 +24,15 @@ class ProdBasket
         $this->_totalCost = $this->_prod->_price * $qte;
     }
 
+    /**
+     * @param mixed $qte
+     */
+    public function addQte($qte)
+    {
+        $this->_qte += $qte;
+        $this->_totalCost = $this->_qte * $this->_prod->_price;
+    }
+
+
 
 }

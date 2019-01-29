@@ -24,6 +24,7 @@ define('PATH_TEXT','./Languages/');
 
 //sous dossiers
 define('PATH_CSS', PATH_ASSETS.'css/');
+define('PATH_JS', PATH_ASSETS.'js/');
 define('PATH_IMAGES', PATH_ASSETS.'images/');
 define('PATH_SCRIPTS', PATH_ASSETS.'scripts/');
 

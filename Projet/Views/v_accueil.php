@@ -3,7 +3,9 @@
     <!--  Début de la page -->
     <div class="main">
         <h1><?= TITRE_PAGE_ACCUEIL?></h1>
-        <strong>Bienvenue sur ISIWEBSHOP <?php if(isset($_SESSION["forname"])){echo $_SESSION["forname"];} ?></strong>
+        <strong>Bienvenue sur ISIWEBSHOP <?php
+            if(isset($_SESSION["forname"]))echo $_SESSION["forname"];
+            elseif (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']) echo 'Admin'?></strong>
         <p>Il s'agit d'un site réalisé pour un projet d'étude, bonne visite !</p>
     </div>
 

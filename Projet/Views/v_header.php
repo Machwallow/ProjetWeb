@@ -8,6 +8,9 @@
 
     <link href="<?= PATH_CSS.'/bootstrap.min.css'?>" rel="stylesheet">
     <link href="<?= PATH_CSS.'style.css' ?>" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="<?= PATH_JS.'bootsrap.bundle.js' ?>"></script>
+    <script src="<?= PATH_JS.'bootsrap.js' ?>"></script>
 </head>
 <body>
 <!-- En-tête -->
@@ -34,7 +37,7 @@
         <button onclick="location.href='controller de connexion" type="button">Se connecter</button>
         !-->
         <a class="btn btn-outline-secondary" role="button" <?php
-        if(isset($_SESSION["id"]) && isset($_SESSION["username"]))
+        if(isset($_SESSION["id"]) || (isset($_SESSION["isAdmin"]) && $_SESSION["isAdmin"]))
             echo 'href="./index.php?page=deconnexion">Se déconnecter</a>';
         else
             echo 'href="./index.php?page=connexion">Se connecter</a>'?>

@@ -5,6 +5,7 @@ Merci d'entrer votre identifiant et votre mot de passe pour acceder à votre esp
 		</p>
 		<form action="./index.php?page=connexion" method="post">
 	        	<ul>
+                    <?php if (!is_null($error)) echo "<strong style='color:red;'>$error</strong>"; ?>
 	        		<li>
 	        			<label for="idpseudo">Votre nom d'utilisateur : </label>
 	        			<input type="text" name="username" id="idlogin" required />
@@ -14,7 +15,12 @@ Merci d'entrer votre identifiant et votre mot de passe pour acceder à votre esp
 	        			<label for="idmdp">Votre mot de passe : </label>
 	        			<input type="password" name="pwd" id="idmdp" required />
 	        		</li>
-						</ul>
+                    <br>
+                    <li>
+                        <label for="isAdmin">Compte administrateur :</label>
+                        <input type="checkbox" name="isAdmin" id="isAdmin" value="isAdmin"/>
+                    </li>
+                </ul>
 	        	<br>
 	        	<input class="btn btn-success" type="submit" value="Connexion"/>
 	   </form>
